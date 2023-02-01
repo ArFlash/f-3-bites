@@ -1,0 +1,256 @@
+.Home_SectionA {
+  padding-top: 25px;
+  background-image: url("../Assets/background.jpg");
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.HomeGride {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 125px;
+  padding-bottom: 10px;
+}
+
+#Item1 {
+  justify-self: center;
+  align-self: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.Dadaji {
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 300px;
+  width: 50vw;
+  max-width: 350px;
+}
+
+#Item2 {
+  margin-left: 25px;
+  margin-top: 100px;
+  font-family: "Moon Dance", cursive;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 2em;
+}
+
+.Item2name {
+  font-size: 1.5em;
+  color: rgb(221, 194, 41);
+  font-weight: 600;
+}
+
+#Item2,
+#Item3 {
+  justify-self: left;
+  align-items: center;
+}
+
+#Item3 {
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#Item4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.Momos,
+.Pizza,
+.Burger {
+  height: 200px;
+  animation: rotate 12s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Svg {
+  aspect-ratio: 900/600;
+  width: 100vw;
+  height: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Svg1 {
+  background-image: url("../Assets/Svg1.svg");
+  background-position: bottom left;
+}
+
+.Home_SectionB {
+  background: #202020;
+}
+
+.Dis {
+  /* padding: 10px 0 0 50px; */
+  display: flex;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Gif {
+  box-sizing: content-box;
+  width: 350px;
+  height: 350px;
+}
+
+.Textbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  height: 400px;
+  padding: 5px;
+}
+
+.Textbox_heading {
+  font-size: 50px;
+  background: linear-gradient(to right, #eedd44, #fff, yellow, #fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.English {
+  font-family: "Moon Dance", cursive;
+  font-weight: 900;
+  text-indent: 100px;
+}
+
+.Homebio {
+  text-align: justify;
+  padding: 20px;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1250px) {
+  .Dadaji {
+    max-width: 650px;
+  }
+
+  .Item2name {
+    font-size: 2.3em;
+  }
+
+  #Item2 {
+    margin: 0;
+  }
+
+  #Item3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .Momos,
+  .Pizza,
+  .Burger {
+    min-width: 100px;
+    min-height: 100px;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .Homebio {
+    font-size: 1em;
+  }
+
+  @media screen and (max-width: 950px) {
+    .HomeGride {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-content: center;
+    }
+
+    .Logo {
+      min-width: 225px;
+      width: 25vw;
+    }
+
+    .Banner {
+      min-width: 250px;
+      width: 45vw;
+    }
+
+    #Item1,
+    #Item3,
+    #Item4 {
+      align-self: center;
+      justify-self: center;
+    }
+
+    .Item {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    .Svg {
+      height: 50px;
+    }
+    .Dis {
+      flex-direction: column;
+    }
+
+    .Textbox {
+      padding-left: 100px;
+    }
+
+    .Textbox_heading {
+      font-size: 45px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .Item2name {
+        font-size: 1.5em;
+      }
+
+      .HomeGride {
+        margin: 0;
+        gap: -20px;
+      }
+
+      .Dis {
+        overflow: hidden;
+        padding: 5px;
+      }
+
+      .English {
+        text-indent: 50px;
+      }
+
+      .Textbox {
+        padding: 50px 0;
+      }
+
+      .Textbox_heading {
+        font-size: 28px;
+      }
+      .Homebio {
+        padding: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.Container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 500px;
+}
+
+.SwiperSlide {
+  padding-bottom: 20px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.Img {
+  border-radius: 50px;
+  aspect-ratio: 12/9;
+  width: 600px;
+}

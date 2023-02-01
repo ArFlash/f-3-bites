@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+#Loader {
+  background: #3f3f3f;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Spinner {
+  width: 100px;
+  height: 100px;
+  border: 30px solid black;
+  border-top-color: #45f3ff;
+  border-radius: 50%;
+  animation: Spin 2s linear infinite;
+}
+
+@keyframes Spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

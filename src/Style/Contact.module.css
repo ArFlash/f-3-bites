@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+.Contact {
+  padding-left: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+}
+
+.CardBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card {
+  margin: 100px 0;
+  position: relative;
+  background-color: #333;
+  height: 230px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.Card .Lines {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.Card .Lines::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff,
+    transparent
+  );
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.Card .Lines::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+
+.Card .ImgBox {
+  width: 150px;
+  height: 150px;
+  top: -30%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.Card .ImgBox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    transparent,
+    #ff3c7b,
+    #ff3c7b,
+    #ff3c7b,
+    transparent
+  );
+  animation: rotate 6s linear reverse infinite;
+}
+
+.Card .ImgBox::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+
+.ImgBox .ProfileImg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  /* filter: grayscale(1); */
+}
+
+.Card .Content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Card .Content .Details {
+  padding: 40px;
+  text-align: center;
+}
+
+.Card .Content .Details h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #45f3ff;
+  line-height: 1.2em;
+}
+
+.Card .Content .Details h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.Card .Content .Details .Btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.Card .Content .Details .Btn a {
+  text-decoration: none;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 600;
+  background: #45f3ff;
+  color: black;
+}
+
+.ContactInfo {
+  padding: 0 50px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.Tagline {
+  border-radius: 20px 0 0 20px;
+  padding: 20px;
+}
+
+.Tagline span {
+  width: 100%;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #eedd44, #fff, yellow, #fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Satisfy", cursive;
+}
+
+.Tagline p {
+  font-family: "Satisfy", cursive;
+  font-size: 30px;
+  background: none;
+  color: white;
+  text-indent: 100px;
+}
+
+.SmilePng {
+  width: 300px;
+  aspect-ratio: 674/658;
+  background: url("../Assets/Smile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 1150px) {
+  .Contact {
+    flex-direction: column;
+  }
+
+  .Tagline {
+    padding: 0px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 850px) {
+    .Card {
+      margin: 0;
+      margin-top: 100px;
+    }
+
+    .ContactInfo {
+      flex-direction: column-reverse;
+    }
+
+    @media screen and (max-width: 600px) {
+      .Contact {
+        padding: 0;
+        margin-bottom: 100px;
+      }
+
+      .Tagline span {
+        font-size: 30px;
+      }
+
+      .Tagline p {
+        text-indent: 0;
+      }
+    }
+  }
+}

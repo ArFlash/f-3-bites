@@ -1,0 +1,38 @@
+.About {
+  background-color: #333;
+}
+
+.ImgBox {
+  background: url("../Assets/Since.png");
+  aspect-ratio: 2000/1333;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.About h2 {
+  margin-top: 100px;
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #eedd44, #fff, yellow, #fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Satisfy", cursive;
+}
+
+.Location {
+  margin-left: 100px;
+  width: calc(100vw - 140px);
+  padding: 20px;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .Location {
+    width: calc(100vw - 40px);
+    margin: 0;
+  }
+}
